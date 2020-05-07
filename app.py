@@ -1,0 +1,10 @@
+import os
+projectName = input("Informe o nome do projeto: \n")
+projectReadme = input("Fale sobre o projeto: \n")
+os.system('mkdir '+ projectName)
+os.system('touch '+projectName+'/app.py')
+os.system('touch '+projectName+'/readme.md')
+readme = open(os.path.join(projectName+'/readme.md'),'w')
+readme.write(projectReadme)
+readme.close()
+os.system('code '+projectName+'/' )
